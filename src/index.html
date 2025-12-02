@@ -1,16 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>UI Básica</title>
-</head>
-<body>
-  <h1>Hola SENA</h1>
-  <p>Este es mi primer taller con Git y CI.</p>
-  <p>El resultado de la suma es: <span id="resultado"></span></p>
-  <ul id="lista"></ul>
-  <button onclick="agregarItem('Nuevo ítem')">Agregar</button>
+  <head>
+    <meta charset="UTF-8" />
+    <title>UI Básica</title>
+  </head>
+  <body>
+    <h1>Hola SENA</h1>
+    <p>Este es mi primer taller con Git y CI.</p>
 
-  <script src="src/app.js"></script>
-</body>
+    <input id="nuevo-texto" type="text" placeholder="Escribe un ítem..." />
+    <button id="btn-agregar">Agregar</button>
+
+    <ul id="lista"></ul>
+
+    <script src="src/app.js"></script>
+    <script>
+      document.getElementById('btn-agregar').addEventListener('click', () => {
+        const input = document.getElementById('nuevo-texto');
+        const texto = input.value.trim();
+        if (texto) {
+          agregarItem(texto);
+          input.value = '';
+          input.focus();
+        }
+      });
+    </script>
+  </body>
 </html>
