@@ -12,3 +12,5 @@ function agregarItem(texto) {
 console.log('App lista');
 
 module.exports = { sumar };
+=======
+console.log('App funcionando');

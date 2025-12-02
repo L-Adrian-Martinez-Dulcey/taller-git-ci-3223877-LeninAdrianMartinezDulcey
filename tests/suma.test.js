@@ -1,4 +1,5 @@
-const { sumar } = require('../src/app.js');
+const test = require('node:test');
+const assert = require('node:assert/strict');
 
 describe('Pruebas de la función sumar', () => {
   test('suma de 2 + 3 debe ser 5', () => {
@@ -12,4 +13,11 @@ describe('Pruebas de la función sumar', () => {
   test('suma de 0 + 0 debe ser 0', () => {
     expect(sumar(0, 0)).toBe(0);
   });
+=======
+function suma(a, b) {
+  return a + b;
+}
+
+test('suma 2 + 3 = 5', () => {
+  assert.equal(suma(2, 3), 5);
 });

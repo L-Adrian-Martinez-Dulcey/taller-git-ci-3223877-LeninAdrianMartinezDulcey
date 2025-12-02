@@ -9,21 +9,16 @@
   "scripts": {
     "test": "jest",
     "format": "prettier --write ."
+=======
+    "test": "node --test",
+    "format": "prettier --write .",
+    "lint": "prettier --check ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/L-Adrian-Martinez-Dulcey/taller-git-ci-3223877-LeninAdrianMartinezDulcey.git"
-  },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/L-Adrian-Martinez-Dulcey/taller-git-ci-3223877-LeninAdrianMartinezDulcey/issues"
-  },
-  "homepage": "https://github.com/L-Adrian-Martinez-Dulcey/taller-git-ci-3223877-LeninAdrianMartinezDulcey#readme",
   "devDependencies": {
     "jest": "^30.2.0",
+=======
     "prettier": "^3.7.3"
   }
 }

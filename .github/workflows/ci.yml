@@ -5,6 +5,11 @@ on:
     branches: [main, feat/ui-basica]
   pull_request:
     branches: [main]
+=======
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -34,3 +39,26 @@ jobs:
       # 5. Ejecutar tests con Jest
       - name: Run tests
         run: npm test
+=======
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci || npm install
+          fi
+
+      - name: Lint (Prettier)
+        run: npx prettier . --check
+
+      - name: Run tests
+        run: |
+          if [ -d tests ]; then
+            node --test
+          else
+            echo "No tests"
+          fi
