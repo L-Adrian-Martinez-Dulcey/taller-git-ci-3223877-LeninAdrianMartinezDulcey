@@ -7,6 +7,9 @@
     "test": "tests"
   },
   "scripts": {
+    "test": "jest",
+    "format": "prettier --write ."
+=======
     "test": "node --test",
     "format": "prettier --write .",
     "lint": "prettier --check ."
@@ -14,6 +17,8 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "jest": "^30.2.0",
+=======
     "prettier": "^3.7.3"
   }
 }

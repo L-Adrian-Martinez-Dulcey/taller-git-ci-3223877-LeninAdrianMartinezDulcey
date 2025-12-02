@@ -1,6 +1,11 @@
 name: CI
 
 on:
+  push:
+    branches: [main, feat/ui-basica]
+  pull_request:
+    branches: [main]
+=======
   pull_request:
     branches: [main]
   push:
@@ -11,6 +16,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout del código
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Configurar Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Jest explicitly
+        run: npm install --save-dev jest
+      # 3. Instalar dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Verificar formato con Prettier
+      - name: Run Prettier check
+        run: npx prettier --check .
+
+      # 5. Ejecutar tests con Jest
+      - name: Run tests
+        run: npm test
+=======
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
