@@ -1,0 +1,17 @@
+{
+  "name": "taller-git-ci-3223877-leninadrianmartinezdulcey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": { "test": "tests" },
+  "scripts": {
+    "test": "node --test",
+    "format": "prettier --write .",
+    "lint": "prettier --check ."
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "prettier": "^3.7.3"
+  }
+}
