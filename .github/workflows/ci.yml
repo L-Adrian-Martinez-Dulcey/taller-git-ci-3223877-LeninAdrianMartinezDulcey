@@ -20,7 +20,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
+      
+      - name: Install Jest explicitly
+        run: npm install --save-dev jest
       # 3. Instalar dependencias
       - name: Install dependencies
         run: npm install
