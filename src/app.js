@@ -7,6 +7,7 @@ function agregarItem(texto) {
   const li = document.createElement("li");
   li.textContent = texto;
   lista.appendChild(li);
+  
 }
 
 console.log("App lista");
